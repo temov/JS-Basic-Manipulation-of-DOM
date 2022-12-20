@@ -10,7 +10,7 @@ function printSum(array,listElement,sumElement,calc){
    let sum =0;
 //    calc.innerHTML += `The math equiation of the sum is:(`;
    listElement.innerHTML+= ''; //clear element
-   listElement.innerHTML+= '<ul target_blank>';
+   listElement.innerHTML+= '<ul>';
     for(let i =0; i < array.length; i++){
         listElement.innerHTML+= `<li>${array[i]}</li>`;
         // calc.innerHTML+= `${array[i]}+`;
