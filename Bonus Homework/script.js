@@ -3,25 +3,21 @@
 
 
 let recipeNameElement = prompt('What is the name of the recipe');
-let ingredientsNumber = parseInt(prompt('How much ingredients do we need for the recipe'));
-let ingredientFirst = prompt('Enter the name of the first ingredient');
-let ingredientSecond = prompt('Enter the name of the second ingredient');
-let ingredientThird = prompt('Enter the name of the third ingredient');
-let ingredientFourth = prompt('Enter the name of the fourth ingredient');
-
+let ingredientsNumber = parseInt(prompt('How much ingredients do you need for the recipe'));
 let recipeHeading = document.getElementById('recipeTitle');
 let listIngredients = document.getElementById('listIngredients');
 
 
-let arrayIngredients = [ingredientFirst,ingredientSecond,ingredientThird,ingredientFourth];
 
+let arrayIngredients = [];
 function printRecipe(recipeNameElement,arrayIngredients,recipeHeading,listIngredients){
     
-        console.log(arrayIngredients);
     
         listIngredients.innerHTML += `<ul>`;
 
-        for(let i=0; i< arrayIngredients.length;i++){
+        for(let i=0; i< ingredientsNumber;i++){
+            let ingredient = prompt(`Enter the names of the ingredients one by one`);
+            arrayIngredients.push(ingredient);
             listIngredients.innerHTML+= `<li>${arrayIngredients[i]}</li>`;
         }
         listIngredients.innerHTML += `</ul>`;
